@@ -1,0 +1,142 @@
+{
+  "project": {
+    "name": "Project 2 - IceStream",
+    "week": 1,
+    "objective": "Develop all six modules independently and in parallel without waiting for another member's code. Use sample or mock data where integration is not yet available."
+  },
+  "team": [
+    {
+      "member": "Gaurii",
+      "module": "Kafka + Stream Generator",
+      "responsibilities": [
+        "Create a Python script to generate e-commerce transaction data",
+        "Send transaction data to a Kafka topic",
+        "Include bad data such as NULL values, missing fields, wrong data types, invalid values, and duplicates"
+      ]
+    },
+    {
+      "member": "Khushboo",
+      "module": "Apache Flink",
+      "responsibilities": [
+        "Set up the Flink processing module",
+        "Use sample JSON data initially",
+        "Read and process transaction events",
+        "Produce processed output",
+        "Do not wait for Kafka integration"
+      ]
+    },
+    {
+      "member": "Sahithya",
+      "module": "Apache Iceberg",
+      "responsibilities": [
+        "Set up the Apache Iceberg environment",
+        "Create the main transaction table",
+        "Create the DLQ table",
+        "Use sample data initially",
+        "Test writing and retrieving data independently"
+      ]
+    },
+    {
+      "member": "Harsha",
+      "module": "Data Quality",
+      "responsibilities": [
+        "Create Python data-quality validation rules",
+        "Check NULL values",
+        "Check missing columns",
+        "Check incorrect data types",
+        "Check duplicate transaction IDs",
+        "Return clear PASS or FAIL results with reasons"
+      ]
+    },
+    {
+      "member": "Shamitha",
+      "module": "Circuit Breaker & Automation",
+      "responsibilities": [
+        "Create circuit-breaker logic independently",
+        "Calculate error percentage",
+        "Set status to QUARANTINED when error rate is greater than 2%",
+        "Implement HEALTHY, WARNING, QUARANTINED, and RECOVERING states",
+        "Use sample quality results initially"
+      ]
+    },
+    {
+      "member": "Mukesh",
+      "module": "React Flow Dashboard",
+      "responsibilities": [
+        "Create the React Flow pipeline UI",
+        "Show Kafka -> Flink -> Iceberg -> Data Quality -> Analytics",
+        "Add node statuses such as HEALTHY, FAILED, and PAUSED",
+        "Use mock or static status data initially",
+        "Do not wait for backend integration"
+      ]
+    }
+  ],
+  "common_transaction_format": {
+    "transaction_id": "TX10001",
+    "user_id": "U501",
+    "product_id": "P100",
+    "amount": 1250.5,
+    "tax_amount": 225.09,
+    "payment_method": "UPI",
+    "timestamp": "2026-09-19T10:30:00"
+  },
+  "week_1_workflow": {
+    "day_1": "Start assigned module and complete initial project setup.",
+    "day_2": "Continue core module development.",
+    "day_3": "Complete the main functionality of the assigned module.",
+    "day_4": "Test the module independently using sample or mock data.",
+    "day_5": "Fix issues, improve functionality, and prepare the demonstration.",
+    "day_6": "Finalize the module and prepare it for integration.",
+    "day_7": "Complete documentation, demonstrate the module, and confirm GitHub work is pushed."
+  },
+  "github_rules": {
+    "branch_rule": "Each member must work only on their assigned branch.",
+    "commit_frequency": "Commit and push work regularly, preferably every day.",
+    "commit_format": "week-1-DAY: description",
+    "examples": [
+      "week-1-1: initialize Kafka transaction generator",
+      "week-1-2: add transaction event generation",
+      "week-1-3: implement transaction processing logic",
+      "week-1-4: test module with sample transaction data",
+      "week-1-5: fix validation and error handling",
+      "week-1-6: prepare module for integration",
+      "week-1-7: complete Week 1 module and documentation"
+    ],
+    "multiple_commits_same_day": "Multiple commits on the same day may use the same day number.",
+    "example_multiple_commits": [
+      "week-1-2: update Kafka producer",
+      "week-1-2: add invalid transaction samples",
+      "week-1-2: test Kafka topic publishing"
+    ],
+    "rules": [
+      "Do not wait for another member's code.",
+      "Use sample JSON or mock data when dependencies are not ready.",
+      "Do not modify another member's assigned module without discussion.",
+      "Push completed work to the assigned GitHub branch.",
+      "Keep commits small, clear, and related to the day's work."
+    ]
+  },
+  "week_1_targets": [
+    "Kafka working",
+    "Flink working",
+    "Iceberg working",
+    "Data Quality working",
+    "Circuit Breaker working",
+    "React Flow Dashboard working"
+  ],
+  "integration_flow": [
+    "Kafka",
+    "Flink",
+    "Iceberg",
+    "Data Quality",
+    "Circuit Breaker",
+    "Analytics / Dashboard"
+  ],
+  "success_criteria": [
+    "All six modules work independently",
+    "Each member has tested their assigned module",
+    "Each member has committed and pushed their Week 1 work",
+    "Each member can demonstrate their module",
+    "The team is ready to begin integration"
+  ]
+}
