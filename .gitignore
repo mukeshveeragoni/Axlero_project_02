@@ -1,0 +1,34 @@
+﻿# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Node.js
+node_modules/
+dist/
+
+# Local databases and generated storage
+*.db
+*.sqlite
+*.sqlite3
+iceberg/warehouse/
+
+# Environment secrets
+.env
+.env.*
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Generated transaction outputs
+data/valid_transactions.jsonl
+quarantine/quarantined_transactions.jsonl
+iceberg/data/*.parquet
+
+# Local Iceberg catalog configuration and generated table storage
+iceberg/catalog.yaml
+iceberg/warehouse/
